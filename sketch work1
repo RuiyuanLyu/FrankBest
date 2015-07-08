@@ -1,0 +1,43 @@
+int x = 10;               // variable x - location
+int dx = 2;              // variable dx - speed
+int y = -10;
+int dy = 2;
+
+void setup ()           // setup function 
+{
+    size (500,500);
+}
+
+void draw ()            // draw function
+{
+  background(0);
+  strokeWeight(0);
+  
+  fill(255,0,0);
+  ellipse(x,y+20,20,20);
+
+  fill(255,255,0);
+  ellipse(x,y+50,20,20);
+
+  fill(0,255,0);
+  ellipse(x,y+80,20,20);
+  
+  if (x > 490)
+  {
+    dx = -dx;
+  }
+  if ( x < 10 )
+  {
+    dx=-dx;
+  }
+  if ( y > 410)
+  {
+    dy = -dy;
+  }
+  if (y < -10)
+  {
+    dy = -dy;
+  }
+  x = x + dx;
+  y = y + dy;
+}
